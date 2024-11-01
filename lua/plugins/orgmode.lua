@@ -1,4 +1,5 @@
 return {
+  {'dhruvasagar/vim-table-mode'},
   {
     'akinsho/org-bullets.nvim',
     config = function()
@@ -35,6 +36,12 @@ return {
   {
     "lukas-reineke/headlines.nvim",
     dependencies = "nvim-treesitter/nvim-treesitter",
-    config = true, -- or `opts = {}`
+    config = function ()
+      require("headlines").setup {
+        markdown = {
+          headline_highlights = false,
+        },
+      }
+    end
   },
 }
