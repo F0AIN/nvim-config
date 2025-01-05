@@ -38,3 +38,9 @@ vim.keymap.set('n', 'sn', ':bnext<CR>')
 vim.keymap.set('n', 'sp', ':bprev<CR>')
 vim.keymap.set('n', '<Leader>q', ':bdelete<CR>')
 
+local wk = require("which-key")
+wk.add({
+  { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
+  { "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Live Grep", mode = "n" },
+})
+
