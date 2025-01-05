@@ -10,6 +10,10 @@ vim.keymap.set('n', 'ZQ', '<NOP>')
 vim.keymap.set('n', '<Up>', '<C-y>')
 vim.keymap.set('n', '<Down>', '<C-e>')
 
+-- folding
+vim.api.nvim_set_keymap('n', '<Tab>', 'zo', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', 'zc', { noremap = true, silent = true })
+
 -- Disable arrow keys
 vim.keymap.set('n', 's', '<NOP>')
 vim.keymap.set('n', 'S', '<NOP>')
