@@ -36,5 +36,5 @@ vim.keymap.set('n', 'sH', '<C-w>H')
 vim.keymap.set('n', 'sb', ':b#<CR>')
 vim.keymap.set('n', 'sn', ':bnext<CR>')
 vim.keymap.set('n', 'sp', ':bprev<CR>')
-vim.keymap.set('n', '<Leader>c', ':bdelete<CR>')
+vim.keymap.set('n', '<Leader>q', ':bdelete<CR>')
 
