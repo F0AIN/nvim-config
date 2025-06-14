@@ -5,8 +5,24 @@ return {
     lazy = false,
     config = function()
       -- load the colorscheme here
-      vim.cmd([[colorscheme dracula]])
+      -- vim.cmd([[colorscheme dracula]])
     end,
+  },
+  {
+    'danilo-augusto/vim-afterglow',
+    lazy = false,
+    config = function ()
+      -- vim.cmd([[colorscheme afterglow]])
+    end
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function ()
+      vim.cmd([[colorscheme tokyonight-night]])
+    end
   },
   -- UI
   {
