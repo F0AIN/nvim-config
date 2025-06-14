@@ -43,7 +43,16 @@ vim.api.nvim_create_user_command('ReloadConfig', 'source $MYVIMRC', {})
 
 local wk = require("which-key")
 wk.add({
+  { "<leader>f", group = "Find" }, -- group
+  { "<leader>g", group = "Git" }, -- git
+  { "<leader>e", group = "Explorer" },
   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find File", mode = "n" },
   { "<leader>fw", "<cmd>Telescope live_grep<cr>", desc = "Live Grep", mode = "n" },
+  { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers", mode = "n" },
+  { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Find Help", mode = "n" },
+  { "<leader>b", group = "Buffers", expand = function()
+      return require("which-key.extras").expand.buf()
+    end
+  },
 })
 
