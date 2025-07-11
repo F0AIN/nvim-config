@@ -1,20 +1,20 @@
 return {
   -- color scheme
-  {
-    'dracula/vim',
-    lazy = false,
-    config = function()
-      -- load the colorscheme here
-      -- vim.cmd([[colorscheme dracula]])
-    end,
-  },
-  {
-    'danilo-augusto/vim-afterglow',
-    lazy = false,
-    config = function ()
-      -- vim.cmd([[colorscheme afterglow]])
-    end
-  },
+  -- {
+  --   'dracula/vim',
+  --   lazy = false,
+  --   config = function()
+  --     -- load the colorscheme here
+  --     -- vim.cmd([[colorscheme dracula]])
+  --   end,
+  -- },
+  -- {
+  --   'danilo-augusto/vim-afterglow',
+  --   lazy = false,
+  --   config = function ()
+  --     -- vim.cmd([[colorscheme afterglow]])
+  --   end
+  -- },
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -48,6 +48,7 @@ return {
   },
   {
     'petertriho/nvim-scrollbar',
+    event = "VeryLazy",
     config = function()
       require('scrollbar').setup()
       require('scrollbar.handlers.search').setup()
@@ -64,12 +65,10 @@ return {
     },
   },
 
-  -- utility
-  { "subnut/nvim-ghost.nvim" },
-
   -- 色表示
   {
     "uga-rosa/ccc.nvim",
+    event = "VeryLazy",
     config = function()
       require("ccc").setup()
     end,
@@ -78,22 +77,32 @@ return {
   -- bar
   {
     "romgrk/barbar.nvim",
+    event = "VeryLazy",
   },
 
   -- lsp
   {
-    "neovim/nvim-lspconfig",
-    config = function() require 'extensions.lsp' end
+    "mason-org/mason.nvim",
+    opts = {
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗"
+          }
+      }
+    }
   },
   {
-    "williamboman/mason.nvim",
-    config = function() require 'extensions.mason' end,
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
     dependencies = {
-      'williamboman/mason-lspconfig.nvim',
-      'neovim/nvim-lspconfig',
-      'hrsh7th/cmp-nvim-lsp'
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
     },
   },
+
+
   {
     "SmiteshP/nvim-navic",
     config = function() require 'extensions.nvim-navic' end,
