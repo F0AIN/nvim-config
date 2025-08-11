@@ -56,3 +56,16 @@ wk.add({
   },
 })
 
+-- Terminal-mode window navigation (tnoremap equivalents)
+local term_opts = { noremap = true, silent = true }
+vim.keymap.set('t', '<C-W>j',       '<cmd>wincmd j<CR>', term_opts)
+vim.keymap.set('t', '<C-W><Up>',    '<cmd>wincmd k<CR>', term_opts)
+vim.keymap.set('t', '<C-W><C-K>',   '<cmd>wincmd k<CR>', term_opts)
+vim.keymap.set('t', '<C-W>k',       '<cmd>wincmd k<CR>', term_opts)
+vim.keymap.set('t', '<C-W><Left>',  '<cmd>wincmd h<CR>', term_opts)
+vim.keymap.set('t', '<C-W><C-H>',   '<cmd>wincmd h<CR>', term_opts)
+vim.keymap.set('t', '<C-W><BS>',    '<cmd>wincmd h<CR>', term_opts)
+vim.keymap.set('t', '<C-W>h',       '<cmd>wincmd h<CR>', term_opts)
+vim.keymap.set('t', '<C-W><Right>', '<cmd>wincmd l<CR>', term_opts)
+vim.keymap.set('t', '<C-W><C-L>',   '<cmd>wincmd l<CR>', term_opts)
+vim.keymap.set('t', '<C-W>l',       '<cmd>wincmd l<CR>', term_opts)
