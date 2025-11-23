@@ -16,7 +16,13 @@ return {
     lazy = false,      -- Recommended
     -- ft = "markdown" -- If you decide to lazy-load anyway
     config = function ()
-      require("markview").setup({});
+      require("markview").setup({
+        markdown = {
+          list_items = {
+            shift_width = 2
+          }
+        }
+      });
     end,
 
     dependencies = {
