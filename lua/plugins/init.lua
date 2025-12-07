@@ -31,12 +31,6 @@ return {
     dependencies = { 'neovim/nvim-lspconfig' },
   },
   {
-    "rebelot/heirline.nvim",
-    config = function()
-      require("extensions.heirline")
-    end,
-  },
-  {
     'goolord/alpha-nvim',
     dependencies = {
       'nvim-tree/nvim-web-devicons',
