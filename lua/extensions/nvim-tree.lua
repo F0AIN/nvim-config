@@ -15,8 +15,8 @@ local function my_nvim_tree_on_enter(bufnr)
 end
 require('nvim-tree').setup {
   view = {
-    width = '30%',
-    side = 'right',
+    width = '25%',
+    side = 'left',
     signcolumn = 'no',
   },
   renderer = {
