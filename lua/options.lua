@@ -46,4 +46,7 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   end,
 })
 
-vim.opt.laststatus = 3
+-- clear statusline
+vim.opt.laststatus = 0
+vim.opt.statusline = "─"
+vim.opt.fillchars:append({ stl = "─", stlnc = "─" })
