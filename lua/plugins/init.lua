@@ -68,12 +68,6 @@ return {
     end,
   },
 
-  -- bar
-  {
-    "romgrk/barbar.nvim",
-    event = "VeryLazy",
-  },
-
   -- lsp
   {
     "mason-org/mason.nvim",
