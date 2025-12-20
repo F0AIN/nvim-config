@@ -50,3 +50,5 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 vim.opt.laststatus = 0
 vim.opt.statusline = "─"
 vim.opt.fillchars:append({ stl = "─", stlnc = "─" })
+-- hide cmdline
+vim.opt.cmdheight = 0
