@@ -58,6 +58,12 @@ return {
       'nvim-tree/nvim-web-devicons',
     },
   },
+  {
+    'b0o/incline.nvim',
+    config = function() require("extensions.incline") end,
+    -- Optional: Lazy load Incline
+    event = 'VeryLazy',
+  },
 
   -- 色表示
   {
